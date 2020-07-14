@@ -1,6 +1,6 @@
 # UI-Tube
 <center>
-![](./src/assets/images/logo.png =200x200)
+![](./src/assets/images/logo.png)
 
 	[![GitHub issues](https://img.shields.io/github/issues/HigorMoroni/iu-tube?color=c4302b&style=for-the-badge)](https://github.com/HigorMoroni/iu-tube/issues) [![GitHub forks](https://img.shields.io/github/forks/HigorMoroni/iu-tube?color=c4302b&style=for-the-badge)](https://github.com/HigorMoroni/iu-tube/network) [![GitHub stars](https://img.shields.io/github/stars/HigorMoroni/iu-tube?color=c4302b&style=for-the-badge)](https://github.com/HigorMoroni/iu-tube/stargazers)  [![GitHub license](https://img.shields.io/github/license/HigorMoroni/iu-tube?color=c4302b&style=for-the-badge)](https://github.com/HigorMoroni/iu-tube/blob/master/LICENSE)
 </center>
