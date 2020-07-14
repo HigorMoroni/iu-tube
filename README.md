@@ -1,9 +1,8 @@
 # UI-Tube
-<center>
-![](./src/assets/images/logo.png =200x200)
 
-	[![GitHub issues](https://img.shields.io/github/issues/HigorMoroni/iu-tube?color=c4302b&style=for-the-badge)](https://github.com/HigorMoroni/iu-tube/issues) [![GitHub forks](https://img.shields.io/github/forks/HigorMoroni/iu-tube?color=c4302b&style=for-the-badge)](https://github.com/HigorMoroni/iu-tube/network) [![GitHub stars](https://img.shields.io/github/stars/HigorMoroni/iu-tube?color=c4302b&style=for-the-badge)](https://github.com/HigorMoroni/iu-tube/stargazers)  [![GitHub license](https://img.shields.io/github/license/HigorMoroni/iu-tube?color=c4302b&style=for-the-badge)](https://github.com/HigorMoroni/iu-tube/blob/master/LICENSE)
-</center>
+![](./src/assets/images/logo.png)
+
+[![GitHub issues](https://img.shields.io/github/issues/HigorMoroni/iu-tube?color=c4302b&style=for-the-badge)](https://github.com/HigorMoroni/iu-tube/issues) [![GitHub forks](https://img.shields.io/github/forks/HigorMoroni/iu-tube?color=c4302b&style=for-the-badge)](https://github.com/HigorMoroni/iu-tube/network) [![GitHub stars](https://img.shields.io/github/stars/HigorMoroni/iu-tube?color=c4302b&style=for-the-badge)](https://github.com/HigorMoroni/iu-tube/stargazers)  [![GitHub license](https://img.shields.io/github/license/HigorMoroni/iu-tube?color=c4302b&style=for-the-badge)](https://github.com/HigorMoroni/iu-tube/blob/master/LICENSE)
 
 <h3 align="center">  
   <a href="#information_source-sobre">Sobre</a> |
@@ -12,8 +11,6 @@
   <a href="#link-como-contribuir">Como Contribuir</a> | 
   <a href="#licença">Licença</a> 
 </h3>
-
-<img src="./server/uploads/index.png" width="1200">
 
 ## :information_source: Sobre
 
