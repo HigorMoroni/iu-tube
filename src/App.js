@@ -10,6 +10,7 @@ const useStyles = makeStyles({
 
 function App() {
   const theme = createMuiTheme({
+    spacing: 4,
     palette: {
       primary: {
         main: '#f44336'
