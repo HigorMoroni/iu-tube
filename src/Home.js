@@ -30,7 +30,8 @@ import {
   VideoLibrary,
   History,
   PlayCircleFilled,
-  AddCircle
+  AddCircle,
+  CheckCircle
 } from '@material-ui/icons';
 import { useTheme } from '@material-ui/core/styles';
 
@@ -57,12 +58,9 @@ const useStyles = makeStyles((theme) => ({
     width: 240,
     borderRight: 'none'
   },
-  menuIcon: {
+  icons: {
     paddingRight: theme.spacing(5),
     paddingLeft: theme.spacing(6)
-  },
-  icons: {
-    paddingRight: theme.spacing(5)
   },
   grow: {
     flexGrow: 1
@@ -76,13 +74,18 @@ const useStyles = makeStyles((theme) => ({
   },
   subheader: {
     textTransform: 'uppercase'
+  },
+  channelName: {
+    '&:hover': {
+      color: '#030303',
+    }
   }
 }));
 
 const videos = [
   {
     id: 1,
-    title: 'Colocamos um EX-TRAFICANTE e uma MÃE d...',
+    title: 'Colocamos um EX-TRAFICANTE e uma MÃE...',
     channel: 'Spotniks',
     icon: 'check',
     views: '2,9 mi de visualizações',
@@ -104,7 +107,7 @@ const videos = [
     id: 3,
     title: 'Gabriela Rocha | Ninguém Explica Deus | Live Juntos...',
     channel: 'Gabriela Rocha',
-    icon: 'music',
+    icon: 'none',
     views: '755 mil visualizações',
     date: 'há 4 semanas',
     avatar: 'AATXAJzhRN7WkZeJhWgKQep2JsaN2DfLBrTutdW60_STVw',
@@ -172,7 +175,7 @@ export default function Home({ darkMode, setDarkMode }) {
         <Toolbar>
           <IconButton
             edge="start"
-            className={classes.menuIcon}
+            className={classes.icons}
             aria-label="menu"
           >
             <Menu />
@@ -219,8 +222,8 @@ export default function Home({ darkMode, setDarkMode }) {
             <Toolbar />
             <div className={classes.drawerContainer}>
               <List>
-                <ListItem button classes={{ root: classes.listItem }}>
-                  <ListItemIcon>{<HomeIcon />}</ListItemIcon>
+                <ListItem button selected classes={{ root: classes.listItem }}>
+                  <ListItemIcon>{<HomeIcon style={{ color: 'red' }}/>}</ListItemIcon>
                   <ListItemText
                     classes={{
                       primary: classes.listItemText
@@ -386,12 +389,12 @@ export default function Home({ darkMode, setDarkMode }) {
             </div>
           </Drawer>
         </Hidden>
-        <Box p={5}>
+        <Box p={7}>
           <Toolbar />
           <Typography
             variant='h5'
             color='textPrimary'
-            style={{ fontWeight: 500, paddingLeft: 10, paddingBottom: 15, fontSize: 20 }}
+            style={{ fontWeight: 500, paddingLeft: 5, paddingBottom: 15, fontSize: 20 }}
           >
             Recomendados
           </Typography>
@@ -401,26 +404,39 @@ export default function Home({ darkMode, setDarkMode }) {
                 <Grid item lg={3} md={4} sm={6} xs={12}>
                   <Box>
                     <img
-                      style={{ width: '100%' }}
+                      style={{ width: '100%', cursor: 'pointer' }}
                       alt={item.title}
                       src={`https://img.youtube.com/vi/${item.thumb}/maxresdefault.jpg`}
                     />
-                    <Box>
-                      <Typography
-                        style={{ fontWeight: 600}}
-                        gutterBottom
-                        variant='body1'
-                        color='textPrimary'
-                      >
-                        {item.title}
-                      </Typography>
-                      <Typography display='block' variant='body2'color='textSecondary'>
-                        {item.channel}
-                      </Typography>
-                      <Typography variant='body2'color='textSecondary'>
-                        {`${item.views} · ${item.date}`}
-                      </Typography>
-                    </Box>
+                    <Grid container style={{ cursor: 'pointer' }}>
+                      <Grid item xs={2}>
+                        <img
+                          style={{ width: 36, borderRadius: 18 }}
+                          alt={index}
+                          src={`https://yt3.ggpht.com/a/${item.avatar}`}
+                        />
+                      </Grid>
+                      <Grid item xs={10}>
+                        <Typography
+                          style={{ fontWeight: 600}}
+                          gutterBottom
+                          variant='body1'
+                          color='textPrimary'
+                        >
+                          {item.title}
+                        </Typography>
+                        <Typography display='block' variant='body2' color='textSecondary'>
+                          <span className={classes.channelName}>{`${item.channel} `}</span>
+                          <span><CheckCircle style={{ fontSize: 12, display: item.icon === 'check' ? '' : 'none' }}/></span>
+                        </Typography>
+                        <Typography variant='body2'color='textSecondary'>
+                          {`${item.views} ·`}
+                        </Typography>
+                        <Typography variant='body2'color='textSecondary'>
+                          {item.date}
+                        </Typography>
+                      </Grid>'
+                    </Grid>
                   </Box>
                 </Grid>
               ))
