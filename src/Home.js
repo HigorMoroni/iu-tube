@@ -15,7 +15,8 @@ import {
   Box,
   Typography,
   Grid,
-  Hidden
+  Hidden,
+  Switch
 } from '@material-ui/core';
 import {
   Menu,
@@ -31,13 +32,15 @@ import {
   PlayCircleFilled,
   AddCircle
 } from '@material-ui/icons';
+import { useTheme } from '@material-ui/core/styles';
 
 import whiteLogo from './assets/images/white-logo.png';
 import blackLogo from './assets/images/black-logo.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    height: '100vh'
+    height: '100vh',
+    backgroundColor: theme.palette.background.dark,
   },
   appBar: {
     boxShadow: 'none',
@@ -160,45 +163,41 @@ const videos = [
 
 ]
 
-export default function Home() {
+export default function Home({ darkMode, setDarkMode }) {
   const classes = useStyles();
+  const theme = useTheme();
   return(
     <div className={classes.root}>
-      <AppBar color="inherit" className={classes.appBar}>
+      <AppBar className={classes.appBar} color='inherit'>
         <Toolbar>
           <IconButton
             edge="start"
             className={classes.menuIcon}
-            color="inherit"
             aria-label="menu"
           >
             <Menu />
           </IconButton>
           <img
-            src={blackLogo}
+            src={
+              theme.palette.type === 'dark' ? 
+              whiteLogo : blackLogo
+            }
             alt="logo"
             className={classes.logo}
           />
-          <sup>BR</sup>
+          <sup style={
+            theme.palette.type === 'dark' ?
+            {color: "white"} : {color: "black"}
+          }>BR</sup>
           <div className={classes.grow} />
-          <IconButton
+          <Switch
+            value={darkMode}
+            onChange={() => setDarkMode(!darkMode)}
             className={classes.icons}
-            color="inherit"
-          >
-            <VideoCall />
-          </IconButton>
-          <IconButton
-            className={classes.icons}
-            color="inherit"
-          >
-            <Apps />
-          </IconButton>
-          <IconButton
-            className={classes.icons}
-            color="inherit"
-          >
-            <MoreVert />
-          </IconButton>
+          />
+          <IconButton className={classes.icons}><VideoCall /></IconButton>
+          <IconButton className={classes.icons}><Apps /></IconButton>
+          <IconButton className={classes.icons}><MoreVert /></IconButton>
           <Button
             variant="outlined"
             color="secondary"
