@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: 'none'
   },
   logo: {
-    height: 30
+    height: 27
   },
   menuIcon: {
     paddingRight: theme.spacing(5),
@@ -46,6 +46,7 @@ export default function Home() {
             alt="logo"
             className={classes.logo}
           />
+          <sup>BR</sup>
           <div className={classes.grow} />
           <IconButton
             className={classes.icons}
