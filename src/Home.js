@@ -95,13 +95,13 @@ const videos = [
   },
   {
     id: 2,
-    title: 'VAR é a BAGUNÇA DE SEMPRE e Santos é assaltado x Inter',
-    channel: 'Eu Vim de Santos',
-    icon: 'none',
-    views: '168 mil visualizações',
-    date: 'há 10 minutos',
-    avatar: 'AKedOLTYdQz16-s2WE2cQrJ_EQRkbwuBc3SHerAWoZoKxA',
-    thumb: 'p6XYu5qH9Yk'
+    title: 'PSY - GANGNAM STYLE(강남스타일) M/V',
+    channel: 'officialpsy',
+    icon: 'check',
+    views: '4,4 bi de visualizações',
+    date: 'há 9 anos',
+    avatar: 'VXVR9IKCRGRAtjdXcul8EcB2MoT1ZC7d8YMlkzVfB8Iuulf3WK5HA_h6BihPBe-OnpS4Fufrag=s88-c-k-c0x00ffffff-no-rj',
+    thumb: '9bZkp7q19f0'
   },
   {
     id: 3,
