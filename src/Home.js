@@ -95,13 +95,13 @@ const videos = [
   },
   {
     id: 2,
-    title: 'Eu, a Patroa e as Crianças - 4x15 | Guerra de doces - HD',
-    channel: 'Eu, a Patroa e as Crianç...',
-    icon: 'check',
-    views: '532 mil visualizações',
-    date: 'há 2 semanas',
-    avatar: 'AATXAJzblZSfMo4NQcSQF-wIdByicMeBT3eCpyFDArDuFg',
-    thumb: 'TuIfJ5ZMh9M'
+    title: 'VAR é a BAGUNÇA DE SEMPRE e Santos é assaltado x Inter',
+    channel: 'Eu Vim de Santos',
+    icon: 'none',
+    views: '168 mil visualizações',
+    date: 'há 10 minutos',
+    avatar: 'AKedOLTYdQz16-s2WE2cQrJ_EQRkbwuBc3SHerAWoZoKxA',
+    thumb: 'p6XYu5qH9Yk'
   },
   {
     id: 3,
